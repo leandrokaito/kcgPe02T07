@@ -7,8 +7,6 @@ body{
     width: 128rem; /*幅は1280px*/
     height: 72rem; /*高さは720px*/
     overflow: hidden; /*枠を超えた部分は隠す*/
-    color: white;
-    background-color: black;
 }
 
 /*
