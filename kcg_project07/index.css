@@ -1,0 +1,27 @@
+header{
+    width: 100vw;
+    height: 10rem;
+    background-color: rgb(233, 233, 139);
+}
+
+main{
+    width: 100vw;
+    height: 90rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game_box{
+    width: 128rem;
+    height: 720rem;
+    border: solid 1px rgb(156, 156, 156);
+}
+
+footer{
+    width: 100vw;
+    height: 10rem;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+}
