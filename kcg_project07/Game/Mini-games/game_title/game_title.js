@@ -26,7 +26,7 @@ $(function(){
         switch(id){
             case "main_mode_button":
 
-                alert("this is a Main");
+                getGameList();
 
                 break;
 
