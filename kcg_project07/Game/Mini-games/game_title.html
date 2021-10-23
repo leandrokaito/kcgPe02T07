@@ -11,11 +11,13 @@
 <script src="./game_title/game_title.js"></script>
 
 <body>
-    <div>
+    <div id="title_screen">
         <h1>ゲームタイトル</h1>
 
-        <div id="main_mode_button">メインモード</div>
-        <div id="free_mode_button">フリーモード</div>
+        <div id="main_mode_button" class="pointer mode_selecter">メインモード</div>
+        <div id="free_mode_button" class="pointer mode_selecter">フリーモード</div>
     </div>
+
+    <div id="game_screen" style="display: none;"></div>
 </body>
 </html>
