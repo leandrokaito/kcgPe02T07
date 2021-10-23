@@ -15,7 +15,7 @@ function getGameList(){
 function csvToArray(data){
     let array = data.split("\n");
 
-    alert(array)
+    alert(array[0])
 }
 
 //初期化
