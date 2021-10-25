@@ -30,8 +30,8 @@ function scoreCal(){
 }
 
 /* 次のゲームを遊ぶ */
-function advanceGame(playIndex){
-    let nextGame = gameList[playIndex];
+function advanceGame(index){
+    let nextGame = gameList[index];
 
     if(nextGame){
         //次に遊ぶゲームがある場合
