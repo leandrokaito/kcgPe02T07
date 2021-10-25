@@ -45,14 +45,14 @@ function advanceGame(){
 
 /* 各ミニゲームをクリアしたときの処理 */
 function clearMiniGame(){
-    alert("Clear game number of " + (playIndex + 1))
+    alert("Clear game number of " + playIndex)
     scoreCal();
     advanceGame();
 }
 
 //初期化
 $(function(){
-    alert("変わってるよ!!!!!!");
+
     getGameList();
 
     $(".mode_selecter").click(function(){
