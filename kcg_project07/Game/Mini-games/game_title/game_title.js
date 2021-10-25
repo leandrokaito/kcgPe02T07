@@ -35,7 +35,7 @@ function advanceGame(){
 
     if(nextGame){
         //次に遊ぶゲームがある場合
-        $("#game_screen").load(`./${nextGame}`);
+        $("#game_screen").load(`./${nextGame}/`);
         playIndex++;
     }else{
         //次のゲームがない場合（全ゲームクリア）
