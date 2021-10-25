@@ -52,7 +52,7 @@ function clearMiniGame(){
 
 //初期化
 $(function(){
-    alert("変わってるよ!!!!!!")
+    alert("変わってるよ!!!!!!");
     getGameList();
 
     $(".mode_selecter").click(function(){
