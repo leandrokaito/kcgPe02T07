@@ -22,7 +22,6 @@ function getGameList(){
 function csvToArray(data){
     let array = data.split("\n");
     gameList = array;
-    alert(gameList[0]);
 }
 
 /* スコアの集計 */
@@ -31,8 +30,8 @@ function scoreCal(){
 }
 
 /* 次のゲームを遊ぶ */
-function advanceGame(index){
-    let nextGame = gameList[index];
+function advanceGame(){
+    let nextGame = gameList[playIndex];
 
     if(nextGame){
         //次に遊ぶゲームがある場合
@@ -48,7 +47,7 @@ function advanceGame(index){
 function clearMiniGame(){
     alert("Clear game number of " + (playIndex + 1))
     scoreCal();
-    advanceGame(playIndex);
+    advanceGame();
 }
 
 //初期化
@@ -63,7 +62,7 @@ $(function(){
 
                 getGameList();
                 playIndex = 0;
-                advanceGame(playIndex);
+                advanceGame();
 
                 break;
 
