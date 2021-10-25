@@ -1,8 +1,8 @@
 /* 変数一覧 */
 let gameList; //ゲームの一覧
-let playIndex; //現在プレイしているゲームの番数
+let playIndex = 0; //現在プレイしているゲームの番数
 let gameScore = 0; //ゲームのスコア
-/* －－－－ -*/
+/* －－－－*/
 
 
 
@@ -61,7 +61,6 @@ $(function(){
                 $("#game_screen").show();
 
                 getGameList();
-                playIndex = 0;
                 advanceGame();
 
                 break;
