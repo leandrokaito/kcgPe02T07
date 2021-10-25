@@ -57,6 +57,8 @@ $(function(){
 
         switch(id){
             case "main_mode_button":
+                alert("clicked MAIN MODE")
+
                 $("#title_screen").hide();
                 $("#game_screen").show();
 
