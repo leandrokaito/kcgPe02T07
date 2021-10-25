@@ -22,6 +22,7 @@ function getGameList(){
 function csvToArray(data){
     let array = data.split("\n");
     gameList = array;
+    alert(gameList[0]);
 }
 
 /* スコアの集計 */
