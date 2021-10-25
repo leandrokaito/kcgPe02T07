@@ -52,6 +52,9 @@ function clearMiniGame(){
 
 //初期化
 $(function(){
+
+    getGameList();
+    
     $(".mode_selecter").click(function(){
         let id = $(this).attr("id");
 
@@ -62,7 +65,6 @@ $(function(){
                 $("#title_screen").hide();
                 $("#game_screen").show();
 
-                getGameList();
                 advanceGame();
 
                 break;
