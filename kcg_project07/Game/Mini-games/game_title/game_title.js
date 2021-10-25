@@ -52,9 +52,9 @@ function clearMiniGame(){
 
 //初期化
 $(function(){
-
+    alert("変えたよ！")
     getGameList();
-    
+
     $(".mode_selecter").click(function(){
         let id = $(this).attr("id");
 
