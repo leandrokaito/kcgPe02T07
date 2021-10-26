@@ -29,7 +29,7 @@ function csvToArray(data){
 function scoreCal(){
     let material = 1 + ((1000 - playTime) / 1000);
     console.log(material);
-    gameScore += baseScore * material;
+    gameScore += (baseScore * material);
 }
 
 /* 次のゲームを遊ぶ */
@@ -43,7 +43,7 @@ function advanceGame(){
         playIndex++;
     }else{
         //次のゲームがない場合（全ゲームクリア）
-        alert(`all game complete!\nスコア＞【${gameScore}】`); //とりあえず
+        alert(`all game complete!\nスコア＞【${Math.floor(gameScore)}】`); //とりあえず
     }
 }
 
