@@ -2,7 +2,7 @@
 let gameList; //ゲームの一覧
 let playIndex = 0; //現在プレイしているゲームの番数
 let gameScore = 0; //ゲームのスコア
-const baseScore = 1000; //スコアの最低値
+const baseScore = 500; //スコアの最低値
 /* －－－－*/
 
 
@@ -28,7 +28,7 @@ function csvToArray(data){
 /* スコアの集計 */
 function scoreCal(){
     let material = 1 + (Math.ceil(1 / playTime));
-    gameScore = baseScore * material;
+    gameScore += baseScore * material;
 }
 
 /* 次のゲームを遊ぶ */
