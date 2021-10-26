@@ -25,8 +25,8 @@ function csvToArray(data){
 }
 
 /* スコアの集計 */
-function scoreCal(){
-    gameScore += 20;　//とりあえずの計算式
+function scoreCal(point){
+    gameScore += point;　//とりあえずの計算式
 }
 
 /* 次のゲームを遊ぶ */
@@ -46,7 +46,6 @@ function advanceGame(){
 /* 各ミニゲームをクリアしたときの処理 */
 function clearMiniGame(){
     alert("Clear game number of " + playIndex)
-    scoreCal();
     advanceGame();
 }
 
