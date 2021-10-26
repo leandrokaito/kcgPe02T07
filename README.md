@@ -5,7 +5,7 @@
 
 【開発ページのプレビュー】
 
-・https://e20c2007-sm.github.io/kcgPe02T07/kcg_project07/index.html
+・https://e20c2007-sm.github.io/kcgPe02T07/kcg_project07/
 
 【参考URL】
 
