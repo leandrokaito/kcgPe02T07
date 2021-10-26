@@ -53,6 +53,7 @@ function clearMiniGame(){
     alert("Clear game number of " + playIndex);
 
     scoreCal();
+    alert("現在のスコア＞" + gameScore);
     advanceGame();
 }
 
