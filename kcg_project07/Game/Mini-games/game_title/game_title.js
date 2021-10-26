@@ -27,8 +27,12 @@ function csvToArray(data){
 
 /* スコアの集計 */
 function scoreCal(){
-    let material = 1 + ((1000 - playTime) / 1000);
-    console.log(material);
+    let material;
+    if(playTime >= 600){
+        material = 1;
+    }else{
+        material = 1 + ((600 - playTime) / 600);
+    }
     gameScore += (baseScore * material);
 }
 
