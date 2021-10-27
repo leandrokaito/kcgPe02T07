@@ -31,7 +31,7 @@ function scoreCal(){
     if(playTime >= 600){
         material = 1;
     }else{
-        material = 1 + ((600 - playTime) / 600);
+        material = 1 + ((600 - playTime) / 300);
     }
     gameScore += (baseScore * material);
 }
