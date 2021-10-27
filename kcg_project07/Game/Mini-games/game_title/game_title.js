@@ -2,6 +2,7 @@
 let gameList; //ゲームの一覧
 let playIndex = 0; //現在プレイしているゲームの番数
 let gameScore = 0; //ゲームのスコア
+const baseScore = 1000; //スコアの最低値
 /* －－－－*/
 
 
@@ -26,7 +27,13 @@ function csvToArray(data){
 
 /* スコアの集計 */
 function scoreCal(){
-    gameScore += 20;　//とりあえずの計算式
+    let material;
+    if(playTime >= 300){
+        material = 1;
+    }else{
+        material = 1 + ((600 - (playTime*2)) / 300);
+    }
+    gameScore += (baseScore * material);
 }
 
 /* 次のゲームを遊ぶ */
@@ -36,18 +43,31 @@ function advanceGame(){
     if(nextGame){
         //次に遊ぶゲームがある場合
         $("#game_screen").load(`./${nextGame}/`);
+        startGameTimer();
         playIndex++;
     }else{
         //次のゲームがない場合（全ゲームクリア）
-        alert(`all game complete!\nスコア＞【${gameScore}】`); //とりあえず
+        alert(`all game complete!\nスコア＞【${Math.floor(gameScore)}】`); //とりあえず
     }
 }
 
 /* 各ミニゲームをクリアしたときの処理 */
 function clearMiniGame(){
-    alert("Clear game number of " + playIndex)
+    clearInterval(playTimeInterval);
+
+    alert("Clear game number of " + playIndex);
+
     scoreCal();
     advanceGame();
+}
+
+/* プレイ時間の計測 */
+let playTimeInterval;
+let playTime = 0;
+function startGameTimer(){
+    playTimeInterval = setInterval(function(){
+        playTime++;
+    }, 1000);
 }
 
 //初期化
