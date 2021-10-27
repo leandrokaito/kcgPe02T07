@@ -9,9 +9,9 @@ const DEGREE = Math.PI/180;
 
 //画像全体読み込み
 const sprite = new Image();
-sprite.src="img/sprite.png";
+sprite.src="./img/sprite.png";
 const sky = new Image();
-sky.src="img/sky.png";
+sky.src="./img/sky.png";
 
 //GAME STATE
 const state = {
@@ -284,7 +284,6 @@ const pipes = {
 
 //DRAW
 function draw(){
-    ctx.fillStyle = "#70c5ce";
     ctx.fillRect(0, 0, cvs.width, cvs.height);
     mainbg.draw();
     bg.draw();

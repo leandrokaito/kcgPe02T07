@@ -42,7 +42,10 @@ function advanceGame(){
 
     if(nextGame){
         //次に遊ぶゲームがある場合
-        $("#game_screen").load(`./${nextGame}/`);
+        $("#game_screen").load(`./${nextGame}/`,function(){
+            /*追加・試し->Ferdi*/
+            $.getScript("./WingyGirl/wingyCode.js") /*Wingy Girlのスクリプト読み込みテスト*/
+        });
         startGameTimer();
         playIndex++;
     }else{
