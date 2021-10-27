@@ -28,10 +28,10 @@ function csvToArray(data){
 /* スコアの集計 */
 function scoreCal(){
     let material;
-    if(playTime >= 600){
+    if(playTime >= 300){
         material = 1;
     }else{
-        material = 1 + ((600 - playTime) / 300);
+        material = 1 + ((600 - (playTime*2)) / 300);
     }
     gameScore += (baseScore * material);
 }
@@ -58,7 +58,6 @@ function clearMiniGame(){
     alert("Clear game number of " + playIndex);
 
     scoreCal();
-    alert("現在のスコア＞" + gameScore);
     advanceGame();
 }
 
