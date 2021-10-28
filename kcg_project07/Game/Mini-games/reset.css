@@ -9,6 +9,10 @@ body{
     overflow: hidden; /*枠を超えた部分は隠す*/
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 /*
 　このcssファイルは絶対にいじらないでください。
 　（各人のcssファイル上からbody要素などにデザインをつぎ足すことができます。）
