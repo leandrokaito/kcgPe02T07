@@ -3,7 +3,7 @@ let gameList; //ゲームの一覧
 let playIndex = 0; //現在プレイしているゲームの番数
 let gameScore = 0; //ゲームのスコア
 const baseScore = 1000; //スコアの最低値
-/* －－－－*/
+/*－－－－*/
 
 
 
