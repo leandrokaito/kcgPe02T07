@@ -3,7 +3,7 @@ let gameList; //ゲームの一覧
 let playIndex = 0; //現在プレイしているゲームの番数
 let gameScore = 0; //ゲームのスコア
 let decPoints = 0; //ミスした回数
-const decScore = 20; //ミスによる減少値
+const decScore = 100; //ミスによる減少値
 const baseScore = 1000; //スコアの最低値
 /*－－－－*/
 
@@ -36,6 +36,17 @@ function scoreCal(){
         material = 1 + ((600 - (playTime*2)) / 300);
     }
     gameScore += (baseScore * material);
+    
+    if(decPoints != 0){
+        let dec = decScore * decPoints;
+        if(!(gameScore - dec <= baseScore)){
+            gameScore - dec;
+        }else{
+            gameScore = baseScore;
+        }
+
+        decPoints = 0;
+    }
 }
 
 /* 次のゲームを遊ぶ */
@@ -64,8 +75,8 @@ function clearMiniGame(){
 }
 
 /* 各ゲームでミスをしたときの処理 */
-function failedMiniGame(){
-    //考え中
+function missCounter(){
+    decPoints++;
 }
 
 /* プレイ時間の計測 */
