@@ -121,12 +121,4 @@ $(function(){
                 break;
         }
     });
-
-    $(document).on("click", "#finish_this_game", function(){
-        clearMiniGame();
-    });
-
-    $(document).on("click", "#miss_button", function(){
-        missCounter();
-    });
 });
