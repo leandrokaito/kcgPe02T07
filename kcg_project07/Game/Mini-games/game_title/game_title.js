@@ -36,12 +36,17 @@ function scoreCal(){
         material = 1 + ((600 - (playTime*2)) / 300);
     }
     gameScore += (baseScore * material);
+}
+
+//最終スコアからミスした分のスコアを減算
+function scoreDec(){
 
     //ミスをしていたときの減算処理
     if(decPoints != 0){
         let dec = decScore * decPoints;
-        if(!(gameScore - dec <= baseScore)){
-            gameScore - dec;
+        alert(dec);
+        if(gameScore - dec > baseScore){
+            gameScore -= dec;
         }else{
             gameScore = baseScore;
         }
@@ -61,7 +66,9 @@ function advanceGame(){
         playIndex++;
     }else{
         //次のゲームがない場合（全ゲームクリア）
-        alert(`all game complete!\nスコア＞【${Math.floor(gameScore)}】`); //とりあえず
+        let miss = decPoints;
+        scoreDec();
+        alert(`all game complete!\nスコア＞【${Math.floor(gameScore)}】\nミスした回数＞【${miss}回】`); //とりあえず
     }
 }
 
