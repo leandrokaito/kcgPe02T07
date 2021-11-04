@@ -3,7 +3,7 @@ let gameList; //ゲームの一覧
 let playIndex = 0; //現在プレイしているゲームの番数
 let gameScore = 0; //ゲームのスコア
 let decPoints = 0; //ミスした回数
-const decScore = 100; //ミスによる減少値
+const decScore = 250; //ミスによる減少値
 const baseScore = 1000; //スコアの最低値
 /* －－－－*/
 
@@ -27,7 +27,7 @@ function csvToArray(data){
     gameList = array;
 }
 
-/* スコアの集計 */
+/* 各ミニゲームにおけるスコアの集計 */
 function scoreCal(){
     let material;
     if(playTime >= 300){
@@ -44,7 +44,6 @@ function scoreDec(){
     //ミスをしていたときの減算処理
     if(decPoints != 0){
         let dec = decScore * decPoints;
-        alert(dec);
         if(gameScore - dec > baseScore){
             gameScore -= dec;
         }else{
