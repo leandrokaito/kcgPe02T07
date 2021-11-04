@@ -10,7 +10,8 @@
 <script>
     $(function(){
         $(document).on("click", "#finish_this_game", function(){
-            $("#finish_this_game, #miss_button").off("click");
+            $(document).off("click", "#finish_this_game").off("click", "#miss_button");
+            
             clearMiniGame();
         });
 
