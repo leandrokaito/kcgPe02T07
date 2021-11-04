@@ -11,7 +11,7 @@
     $(function(){
         $(document).on("click", "#finish_this_game", function(){
             clearMiniGame();
-            $(document).off("click", "#finish_this_game, #miss_button");
+            $("#finish_this_game, #miss_button").off("click");
         });
 
         $(document).on("click", "#miss_button", function(){
