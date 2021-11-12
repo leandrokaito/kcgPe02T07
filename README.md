@@ -7,6 +7,10 @@
 
 ・https://e20c2007-sm.github.io/kcgPe02T07/kcg_project07/
 
+(ローカルリポジトリにあるファイルを各環境（ブラウザなど）で閲覧することも可能です。)
+
+
+
 【参考URL】
 
 ・VScodeとGithubの連携＞https://breezegroup.co.jp/202102/vscode-github-windows/#%E2%91%A0%E9%80%A3%E6%90%BA%E6%89%8B%E9%A0%86
