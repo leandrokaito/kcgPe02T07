@@ -1,0 +1,15 @@
+#main_box{
+    width: 128rem;
+    height: 72rem;
+    background-color: #7fffd4;
+}
+
+#score_box{
+    width: 100rem;
+    height: 60rem;
+}
+
+#score_frame{
+    width: 100rem;
+    height: 60rem;
+}
