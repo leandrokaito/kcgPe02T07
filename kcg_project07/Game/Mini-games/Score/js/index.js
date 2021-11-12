@@ -30,9 +30,9 @@ $(function(){
     $(document).on("click", "#back_to_title", function(){
         resetData();
         $(document).off();
-        $("#game_screen").fadeOut(3000)
+        $("#game_screen").fadeOut(1000)
         setTimeout(function(){
-            $("#title_screen").fadeIn(3000);
+            $("#title_screen").fadeIn(1000);
             $("#game_screen").html("");
         }, 3000);
     });

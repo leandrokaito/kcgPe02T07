@@ -18,13 +18,18 @@
             /* スコアに登録する情報 */
             $name = $_GET["name"]; //プレイヤー名
             $score = $_GET["score"]; //スコアの値
+            $rank; //プレイヤーの順位(後の処理で取得)
 
-            $appendCsv = fopen("./score.csv", "a");
+            $appendCsv = fopen("./score.csv", "a"); //csvファイルへ書き込み
             $array = [$name, $score];
             fwrite($appendCsv, implode(",", $array) . "\n");
             fclose($appendCsv);
 
-            sleep(0.5);
+            sleep(0.5); //同期用
+            /*
+                書き込み後すぐにcsvファイルを読み込むと書き込み処理が間に合わずランキングデータがずれるため、
+                同期代わりにsleep関数を使用し、0.5s処理を待たせています。
+            */
             $scoreCsv = fopen("./score.csv", "r"); //csvファイルの読み込み
             $num = 0;
             $playerData = array();
@@ -74,18 +79,19 @@
 
 
         <!-- スコアをテーブルで表示 -->
-        <table border="1">
+        <table border="1" id="all_rank_list">
             <?php
-                $maxView = 10;
+                $maxView = 10; //ランキングの最大表示数(10位まで)
 
-                $beforeRank = 0;
-                $beforeScore = 0; 
+                $beforeRank = 0; //直前のプレイヤーの順位
+                $beforeScore = 0; //直前のプレイヤーのスコア
 
-                $setScore;
-                $setRank;
+                $setScore; //スコアを入れる変数
+                $setRank; //順位を入れる変数
             ?>
             
             <?php for($i=0; $i < count($playerData); $i++): ?>
+
 
                 <?php if($i == 0): ?>
                     <tr>
@@ -94,7 +100,7 @@
                         <th>スコア</th>
                     </tr>
                     
-                <?php elseif($maxView > 0): ?>
+                <?php else: ?>
                     
                     <?php
                         $setRank = $i;
@@ -104,22 +110,38 @@
                             $setRank = $beforeRank;
                         }
                     ?>
-                    <tr>
-                        <td><?php echo($setRank); ?>位</td>
-                        <td><?php echo($setName); ?></td>
-                        <td><?php echo($setScore); ?></td>
-                    </tr> 
+                    <?php if($maxView > 0): ?>
+                        <tr>
+                            <td><?php echo($setRank); ?>位</td>
+                            <td><?php echo($setName); ?></td>
+                            <td><?php echo($setScore); ?></td>
+                        </tr> 
 
                     <?php 
                         $maxView--;
-
+                        endif;
+                    ?>
+                    <?php
                         $beforeRank = $setRank;
                         $beforeScore = $setScore;
+
+                        if($setName == $name && $setScore == $score){
+                            $rank = $setRank;
+                        }
                     ?>
 
                 <?php endif; ?>
 
             <?php endfor; ?>
+        </table>
+        
+        <h1>あなたの順位</h1>
+        <table border="1" id="my_score_data">
+            <tr>
+                <td><?php echo($rank); ?>位</td>
+                <td><?php echo($name); ?></td>
+                <td><?php echo($score); ?></td>
+            </tr>
         </table>
 
     <?php else: ?>
