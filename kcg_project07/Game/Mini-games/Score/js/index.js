@@ -23,6 +23,7 @@ $(function(){
 
     $(document).on("click", "#score_entry_button", function(){
         $("#play_score_view").fadeOut(1000);
+        $("#score_frame").attr("src", `./Score/score.php?playerScore=${score}`);
         $("#score_box, #score_box *").fadeIn(1000);
     });
 
