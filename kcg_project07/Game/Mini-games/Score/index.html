@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+
+<link rel="stylesheet" href="./reset.css">
+<link rel="stylesheet" href="./Score/css/index.css">
+
+<script src="./Score/js/jquery-2.1.3.js"></script>
+<script src="./Score/js/index.js"></script>
+
+
+<body>
+    <div id="main_box">
+        <div id="play_score_view">
+            <p>今回のスコア</p>
+            <table id="play_score_table">
+                <tr>
+                    <td>ミスした回数</td>
+                    <td><span id="miss_count"></span>回</td>
+
+                </tr>
+                <tr>
+                    <td>クリア時間</td>
+                    <td><span id="clear_time"></span></td>
+                </tr>
+                <tr>
+                    <td id="play_score_box"></td>
+                </tr>
+            </table>
+
+            <div id="score_entry_button">
+                スコアを登録する
+            </div>
+        </div>
+
+        <div id="score_box" style="display: none;">
+            <iframe src="./Score/score.php" id="score_frame" frameborder="0" style="display: none;"></iframe>
+        </div>
+
+        <div id="back_to_title">タイトルに戻る</div>
+    </div>
+</body>
+</html>
