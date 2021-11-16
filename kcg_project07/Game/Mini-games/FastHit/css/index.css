@@ -13,15 +13,23 @@
     }
 }
 
+.slide_to_right{
+    animation-name: slide_to_right;
+    animation-duration: 4s;
+}
+
+@keyframes slide_to_right{
+    0%{
+        right: 25rem;
+    }
+    100%{
+        right: -20rem;
+    }
+}
+
 #main_screen{
     position: relative;
     overflow: hidden;
-}
-
-#play_for_tutorial{
-    background-image: url(../bg/backGround.jpg);
-    background-repeat: no-repeat;
-    background-size: 128rem 72rem;
 }
 
 #main_screen, #front_view_box, #play_for_tutorial, #front_view_box{
@@ -38,7 +46,7 @@
 #front_view{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    transform: scale(1);
     position: absolute;
     z-index: 1;
 }
@@ -48,4 +56,10 @@
     height: 100%;
     position: absolute;
     z-index: 2;
+}
+
+#play_for_tutorial{
+    background-image: url(../bg/backGround.jpg);
+    background-repeat: no-repeat;
+    background-size: 128rem 72rem;
 }

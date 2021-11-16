@@ -3,6 +3,10 @@ html{
     user-select: none; /*ゲーム内におけるテキストの範囲選択を無効化*/
 }
 
+img{
+    pointer-events: none;
+}
+
 body{
     margin: 0; /*デフォルトの余白を消す*/
     width: 128rem; /*幅は1280px*/
