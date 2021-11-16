@@ -1,8 +1,27 @@
+.scale_up{
+    transform-origin: 50% 50%;
+    animation-name: scaleUp;
+    animation-duration: 3s;
+}
+
+@keyframes scaleUp{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+#main_screen{
+    position: relative;
+    overflow: hidden;
+}
+
 #play_for_tutorial{
     background-image: url(../bg/backGround.jpg);
     background-repeat: no-repeat;
     background-size: 128rem 72rem;
-    position: relative;
 }
 
 #main_screen, #front_view_box, #play_for_tutorial, #front_view_box{
@@ -12,13 +31,14 @@
 
 #front_view_box{
     position: relative;
+    overflow: hidden;
     z-index: 0;
 }
 
 #front_view{
     width: 100%;
     height: 100%;
-    transform-origin: 50% 50%;
+    object-fit: cover;
     position: absolute;
     z-index: 1;
 }
