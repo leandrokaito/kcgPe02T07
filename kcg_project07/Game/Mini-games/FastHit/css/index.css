@@ -3,3 +3,27 @@ body{
     background-repeat: no-repeat;
     background-size: 128rem 72rem;
 }
+
+#main_screen, #front_view_box, #play_for_tutorial, #front_view_box{
+    width: 100%;
+    height: 100%;
+}
+
+#front_view_box{
+    position: relative;
+    z-index: 0;
+}
+
+#front_view{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+#shadow_frame{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
