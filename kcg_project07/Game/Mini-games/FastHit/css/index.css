@@ -2,6 +2,7 @@ body{
     background-image: url(../bg/backGround.jpg);
     background-repeat: no-repeat;
     background-size: 128rem 72rem;
+    position: relative;
 }
 
 #main_screen, #front_view_box, #play_for_tutorial, #front_view_box{
