@@ -3,21 +3,9 @@ let gameList; //ゲームの一覧
 let playIndex = 0; //現在プレイしているゲームの番数
 let gameScore = 0; //ゲームのスコア
 let decPoints = 0; //ミスした回数
-
 const decScore = 150; //ミスによる減少値
-
 const baseScore = 1000; //スコアの最低値
 /*－－－－*/
-
-/* 整数を分秒の値に分ける */
-function convertTime(time){
-    let min = Math.floor(time / 60);
-    let sec = time % 60;
-    
-    let playTime = {
-        min: min,
-        sec: sec
-    }
 
 /* 整数を分秒の値に分ける */
 function convertTime(time){
