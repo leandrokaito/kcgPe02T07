@@ -5,6 +5,8 @@ let gameScore = 0; //ゲームのスコア
 let decPoints = 0; //ミスした回数
 const decScore = 100; //ミスによる減少値
 const baseScore = 1000; //スコアの最低値
+
+let selectSound = $("#select_sound").get(0);
 /*－－－－*/
 
 
@@ -88,6 +90,13 @@ function startGameTimer(){
     }, 1000);
 }
 
+//音声(audio)を再生する関数
+function playAudioInit(audio){
+    audio.pause();
+    audio.currentTime = 0;
+    audio.play();
+}
+
 //初期化
 $(function(){
 
@@ -113,6 +122,13 @@ $(function(){
 
                 break;
         }
+    });
+
+    $(document).on("click", "selecter", function(){
+        // playAudioInit(selectSound);
+        selectSound.pause();
+        selectSound.currentTime = 0;
+        selectSound.play();
     });
 
     $(document).on("click", "#finish_this_game", function(){
