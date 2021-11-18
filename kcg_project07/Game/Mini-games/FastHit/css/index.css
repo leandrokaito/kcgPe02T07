@@ -33,12 +33,6 @@
     z-index: 2;
 }
 
-#play_for_tutorial{
-    background-image: url(../bg/backGround.jpg);
-    background-repeat: no-repeat;
-    background-size: 128rem 72rem;
-}
-
 /* アニメーション関連 */
 .scale_up{
     transform-origin: 50% 50%;

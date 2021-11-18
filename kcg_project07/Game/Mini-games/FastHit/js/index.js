@@ -15,7 +15,9 @@ $(function(){
             $("#front_view").addClass("slide_to_right");
             setTimeout(function(){
                 $("#front_view_box").fadeOut(480);
-                $("#play_for_tutorial").fadeIn(500);
+                setTimeout(function(){
+                    $("#load_box").load("./FastHit/fastHit.html");
+                }, 500);
             }, 3500);
         }, 450);
     }, 2500);

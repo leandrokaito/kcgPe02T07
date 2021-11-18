@@ -1,10 +1,35 @@
-/* テスト用のプロパティ */
-
-body{
+#play_screen{
+    width: 128rem;
+    height: 72rem;
     background-image: url(../bg/backGround.jpg);
     background-repeat: no-repeat;
     background-size: 128rem 72rem;
 }
 
-/* ～～～～～～～～～～ */
+/* オブジェクト関連 */
 
+#enemy_box{
+    width: 15rem;
+    height: 25rem;
+    border: solid 2px red;
+}
+
+#barrel{
+    background-image: url(../img/taru.png);
+}
+
+#person{
+
+}
+
+.gunman{
+    background-image: url(../img/gunman.png);
+}
+
+.big_gunman{
+    background-image: url(../img/big_gunman.png);
+}
+
+.lady{
+    background-image: url(../img/lady.png);
+}
