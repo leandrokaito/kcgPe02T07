@@ -3,7 +3,7 @@ let gameList; //ゲームの一覧
 let playIndex = 0; //現在プレイしているゲームの番数
 let gameScore = 0; //ゲームのスコア
 let decPoints = 0; //ミスした回数
-const decScore = 250; //ミスによる減少値
+const decScore = 150; //ミスによる減少値
 const baseScore = 1000; //スコアの最低値
 /* －－－－*/
 
