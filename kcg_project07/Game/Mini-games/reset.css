@@ -1,5 +1,10 @@
 html{
     font-size: 10px; /*remの基準値*/
+    user-select: none; /*ゲーム内におけるテキストの範囲選択を無効化*/
+}
+
+img{
+    pointer-events: none;
 }
 
 body{
