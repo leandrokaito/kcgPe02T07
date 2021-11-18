@@ -11,9 +11,14 @@
 
 
 【便利関数一覧表】
+
 ・clearMiniGame() > ミニゲームクリア時に実行する関数
+
 ・missCounter() > ミスした回数を計測する関数
+
 ・playAudioInit(audio) > 引数(audio)で渡されたaudio要素(※1)を再生する関数
+
+
 
 ※1 …音声のDOMなどは各自HTMLのaudioタグなどで作ってから取得し、それを引数にplayAudioInitを呼びだしてください。
 
