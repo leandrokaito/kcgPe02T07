@@ -2,6 +2,7 @@
 #main_screen{
     position: relative;
     overflow: hidden;
+    cursor: none;
 }
 
 #main_screen,

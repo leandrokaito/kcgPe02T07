@@ -4,22 +4,60 @@
     background-image: url(../bg/backGround.jpg);
     background-repeat: no-repeat;
     background-size: 128rem 72rem;
+    cursor: none;
+    position: relative;
+}
+
+/* 照準のデザイン */
+#aim_pointer{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#aim_pointer img{
+    width: 5rem;
+    height: 5rem;
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
 }
 
 /* オブジェクト関連 */
 
 #enemy_box{
-    width: 15rem;
-    height: 25rem;
+    width: 20rem;
+    height: 33rem;
     border: solid 2px red;
+    position: absolute;
 }
+
+#obj_area{
+    width: 20rem;
+    height: 33rem;
+    position: relative;
+}
+
+#obj_area *{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}   
 
 #barrel{
     background-image: url(../img/taru.png);
+    width: 20rem;
+    height: 19rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
 }
 
 #person{
-
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 
 .gunman{
