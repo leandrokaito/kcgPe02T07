@@ -15,6 +15,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    z-index: 5;
 }
 
 #aim_pointer img{
@@ -23,27 +26,63 @@
     filter: drop-shadow(0 0 5px rgb(0, 0, 0));
 }
 
+/* アニメーション */
+.poped, .push{
+    transform-origin: 50% 50%;
+    animation-duration: 0.3s;
+}
+
+.poped{
+    animation-name: pop;
+}
+
+.push{
+    animation-name: push;
+}
+
+@keyframes pop{
+    0%{
+        transform: scale(0);
+        top: 20rem;
+    }
+    100%{
+        transform: scale(1);
+        top: 0;
+    }
+}
+
+@keyframes push{
+    0%{
+        transform: scale(1);
+        top: 0;
+    }
+    100%{
+        transform: scale(0);
+        top: 20rem;
+    }
+}
+
 /* オブジェクト関連 */
 
-#enemy_box{
+.enemy_box{
     width: 20rem;
     height: 33rem;
     border: solid 2px red;
     position: absolute;
 }
 
-#obj_area{
+.obj_area{
     width: 20rem;
     height: 33rem;
     position: relative;
 }
 
-#obj_area *{
+.obj_area *{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }   
 
-#barrel{
+.barrel{
     background-image: url(../img/taru.png);
     width: 20rem;
     height: 19rem;
@@ -52,11 +91,12 @@
     z-index: 2;
 }
 
-#person{
+.person{
+    position: absolute;
     width: 20rem;
     height: 20rem;
-    position: absolute;
-    top: 0;
+    top: 20rem;
+    transform: scale(0);
     z-index: 1;
 }
 
@@ -70,4 +110,11 @@
 
 .lady{
     background-image: url(../img/lady.png);
+}
+
+/* チュートリアル用 */
+.tutorial{
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
